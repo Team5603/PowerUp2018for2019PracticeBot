@@ -87,16 +87,20 @@ public class OI {
 		suckerplooperPloopLowButton2.whileHeld(new SuckerPlooper_Ploop_Low());
 		suckerplooperPloopHighButton = new JoystickButton(opPad, JoystickMap.gamepad.Y);
 		suckerplooperPloopHighButton.whileHeld(new SuckerPlooper_Ploop_High());
+		/* 2/10/19 - Removing Climber - removed motors
 		climberClimbButton = new JoystickButton(opPad, JoystickMap.gamepad.LB);
 		climberClimbButton.whileHeld(new Climber_Climb());
 		climberDescendButton = new JoystickButton(opPad, JoystickMap.gamepad.X);
 		climberDescendButton.whileHeld(new Climber_Descend());
+		*/
 		liftTurnOffMaintainButton = new JoystickButton(opPad, JoystickMap.gamepad.L3);
 		liftTurnOffMaintainButton.whenPressed(new LiftTurnOffMaintain());
 		elbowTurnOffMaintainButton = new JoystickButton(opPad, JoystickMap.gamepad.R3);
 		elbowTurnOffMaintainButton.whenPressed(new ElbowTurnOffMaintain());
+		/* 2/10/19 - removed buddy bar control, not needed for testing/practice bot
 		buddyBarDown = new JoystickButton(opPad, JoystickMap.gamepad.START);
 		buddyBarDown.whenPressed(new BuddyBar_Down(1)); 
+		*/
 		driverLeftJoystick = new Joystick(DRIVER_LEFT_JOYSTICK_ID);
 		driverRightJoystick = new Joystick(DRIVER_RIGHT_JOYSTICK_ID);
 		turboButton = new JoystickButton(driverLeftJoystick, JoystickMap.joystickGeneric.TRIGGER);

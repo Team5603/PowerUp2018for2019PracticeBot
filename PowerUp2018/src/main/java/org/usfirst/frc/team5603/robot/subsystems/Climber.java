@@ -40,7 +40,10 @@ public class Climber extends PIDSubsystem {
     	super(0,0,0);
     	
 		//m_climberMotor = new Spark(RobotMap.CLIMBER_PWM);
-    	m_climberMotor1 = new TalonSRX(RobotMap.CLIMBER1_ID);
+/* taking out since we removed climber motor controllers in 2019 
+	2/10/19
+
+		m_climberMotor1 = new TalonSRX(RobotMap.CLIMBER1_ID);
     	m_climberMotor2 = new TalonSRX(RobotMap.CLIMBER2_ID);
 
 
@@ -64,14 +67,15 @@ public class Climber extends PIDSubsystem {
     	m_climberMotor2.setNeutralMode(NeutralMode.Brake);
 
 		
-    	m_maintain = false;
+*/
+		m_maintain = false;
     }
 
     public void Climb() {
     	//Robot.logDebug("Climber Climb", 1);
     	//m_climberMotor.set(CLIMBER_POWER_UP);
-    	m_climberMotor1.set(ControlMode.PercentOutput,CLIMBER_POWER_UP);
-    	m_climberMotor2.set(ControlMode.PercentOutput,CLIMBER_POWER_UP);
+//    	m_climberMotor1.set(ControlMode.PercentOutput,CLIMBER_POWER_UP);
+//    	m_climberMotor2.set(ControlMode.PercentOutput,CLIMBER_POWER_UP);
     	// Put some code in here to slightly drive the lift as well!!!
     	
     	m_maintain = true;
@@ -79,16 +83,16 @@ public class Climber extends PIDSubsystem {
     
     public void Descend() {
     	//m_climberMotor.set(-CLIMBER_POWER_DOWN);
-    	m_climberMotor1.set(ControlMode.PercentOutput,-CLIMBER_POWER_DOWN);
-    	m_climberMotor2.set(ControlMode.PercentOutput,-CLIMBER_POWER_DOWN);
+//    	m_climberMotor1.set(ControlMode.PercentOutput,-CLIMBER_POWER_DOWN);
+//    	m_climberMotor2.set(ControlMode.PercentOutput,-CLIMBER_POWER_DOWN);
     	
     	m_maintain=false;
     	
     }
     
     public void Maintain() {
-    	m_climberMotor1.set(ControlMode.PercentOutput,MAINTAIN_POWER);
-    	m_climberMotor2.set(ControlMode.PercentOutput,MAINTAIN_POWER);
+//   	m_climberMotor1.set(ControlMode.PercentOutput,MAINTAIN_POWER);
+//    	m_climberMotor2.set(ControlMode.PercentOutput,MAINTAIN_POWER);
     }
 
     public boolean IsMaintained()
@@ -97,25 +101,25 @@ public class Climber extends PIDSubsystem {
     }
     public void Stop() {
     	//m_climberMotor.set(0);
-    	m_climberMotor1.set(ControlMode.PercentOutput,0);
-    	m_climberMotor2.set(ControlMode.PercentOutput,0);
+//    	m_climberMotor1.set(ControlMode.PercentOutput,0);
+//   	m_climberMotor2.set(ControlMode.PercentOutput,0);
     }
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
-    	setDefaultCommand(new Climber_Maintain());
+//    	setDefaultCommand(new Climber_Maintain());
     }
     
     public void test1(double motorOutput)
     {
-    	m_climberMotor1.set(ControlMode.PercentOutput,motorOutput);
+//    	m_climberMotor1.set(ControlMode.PercentOutput,motorOutput);
 
     
     }
     
     public void test2(double motorOutput)
     {
-    	m_climberMotor2.set(ControlMode.PercentOutput,motorOutput);
+//    	m_climberMotor2.set(ControlMode.PercentOutput,motorOutput);
     	
     }
     protected double returnPIDInput() {

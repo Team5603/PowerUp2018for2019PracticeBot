@@ -13,12 +13,12 @@ public class BuddyBar extends Subsystem {
 	public Spark m_BuddyBarMotor;
 	
 	public BuddyBar() {
-		m_BuddyBarMotor = new Spark(RobotMap.BUDDY_BAR_MOTOR_PWM);
+		//m_BuddyBarMotor = new Spark(RobotMap.BUDDY_BAR_MOTOR_PWM);
 		
 	}
 	
 	public void setPower(double buddyBarPower) {
-		m_BuddyBarMotor.set(buddyBarPower);
+		//m_BuddyBarMotor.set(buddyBarPower);
 	}
 	
     public void initDefaultCommand() {

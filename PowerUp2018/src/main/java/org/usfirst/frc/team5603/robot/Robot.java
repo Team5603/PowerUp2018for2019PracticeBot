@@ -58,7 +58,7 @@ public class Robot extends TimedRobot {
 	// 1 - called once items, such as initialize constructors, etc.
 	// 2 - loops that are triggered from a button, etc.
 	// 3 - default loops, such as drive w/joystick execute
-	public static final int DEBUG_LEVEL=1; 
+	public static final int DEBUG_LEVEL=10; 
 	
 	// Are we running/testing Chassis only? won't initialize other motor controllers, operator joystick, buttons, etc
 	//public static final boolean CHASSIS_ONLY=false;

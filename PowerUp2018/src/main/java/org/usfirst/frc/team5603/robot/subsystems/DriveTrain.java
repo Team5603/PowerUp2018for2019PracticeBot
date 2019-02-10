@@ -9,7 +9,7 @@ import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
-import com.kauailabs.navx.frc.AHRS;
+//import com.kauailabs.navx.frc.AHRS;
 
 import Util.UtilityFunctions;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
@@ -196,7 +196,7 @@ public class DriveTrain extends PIDSubsystem {
     }
     public void tankDrive(double leftPower, double rightPower) {
     	if (!(leftPower==0 && rightPower==0))
-    		//Robot.logDebug("TankDrive: "+ Double.toString(leftPower) + " - " + Double.toString(rightPower) + " - Turbo:" + Boolean.toString(Robot.m_oi.getTurbo()),3);
+    		Robot.logDebug("TankDrive: "+ Double.toString(leftPower) + " - " + Double.toString(rightPower) + " - Turbo:" + Boolean.toString(Robot.m_oi.getTurbo()),3);
     	
     	if (Robot.m_oi.getSlow())
     		m_differentialDrive.tankDrive(leftPower*SLOW_MULTIPLIER, rightPower*SLOW_MULTIPLIER, false);

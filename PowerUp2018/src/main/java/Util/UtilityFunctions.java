@@ -66,7 +66,9 @@ public class UtilityFunctions {
     public static double GetMotorCurrent( BaseMotorController thisTalon) {
 		double returnValue=0;
 
-		returnValue = thisTalon.getOutputCurrent();
+		//This seems to have been changed in 2019 to not visible?  Just returning 0 for current for now it's not needed for functionality of the robot
+		//returnValue = thisTalon.getOutputCurrent();
+		returnValue = 0;
 
     	return returnValue;
     	
